@@ -1,0 +1,20 @@
+
+reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S78_M8-5_STEL.ascii (ASCII) ...reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S78_M8-5_STEL.ascii (ASCII) ... (10000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S78_M8-5_STEL.ascii (ASCII) ... (20000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S78_M8-5_STEL.ascii (ASCII) ... (30000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S78_M8-5_STEL.ascii (ASCII) ... (40000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S78_M8-5_STEL.ascii (ASCII) ... (50000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S78_M8-5_STEL.ascii (ASCII) ... done. (51729 lines)
+Margin set to 0.13419 (actual size is ~12238.7).
+Tesselating 51729 particles (3D) ... (+0 in boundary) done. (0.51s elapsed)
+Circumsphere test was skipped.
+Computing density ... done.
+All done in 0.66 s.
+Converting tesselation to NDnetwork ... done.
+Will write network to file 'TNG100_S78_M8-5_STEL.ascii.NDnet'.
+All done.
+
+Network was saved as : TNG100_S78_M8-5_STEL.ascii.NDnet
+   comment: 'No cosmological conversion.'
+   3D-Network has 51729 vertices.
+   periodicity: non-periodic.
+   Available faces: 377763 1-F, 651904 2-F, 325869 3-F.
+   Bounding box: x0=[-8101.57,-8101.65,-8102.21],
+                 delta=[91201.6,91204.2,91202.7].
+   Available fields: 'field_value'(0), 'log_field_value'(0), 'mass'(0)
+

@@ -1,0 +1,73 @@
+
+****** MSE v0.9.24 (64 bits) ******
+Will read network from file '/Users/cd201/disperse/disperse_TNG/dtfe_catalogues/TNG100/stel_subhalo/TNG100_S33_M8-5_STEL.ascii.NDnet'.
+Loading 3D network from file "/Users/cd201/disperse/disperse_TNG/dtfe_catalogues/TNG100/stel_subhalo/TNG100_S33_M8-5_STEL.ascii.NDnet" ... done.
+Computing 3-faces lists for vertice ... done.
+Computing 2-faces lists for vertice ... done.
+Computing 1-faces lists for vertice ... done.
+Building mask ... done. (288 2-faces on boundary)
+*********************************
+Starting Morse-Smale complex computation.
+Computing discrete gradient for 961071 cells:
+   Identifying (2,3)-cell pairs:
+      Sorting 446070 2-cells (asc.) ... done.
+      Computing MST ... (components) done.(128/222963 comp.)
+      Computing discrete Gradient (128 comp.) ... done.
+   Identifying (1,0)-cell pairs:
+      Sorting 257572 1-cells (desc.) ... done.
+      Computing MST ... (components) done.(3367/34466 comp.)
+      Computing discrete Gradient (3367 comp.) ... done.
+   Identifying (1,2)-cell pairs:
+      Computing saddle-saddle DG ... done.
+   Critical cells : 3367(+0) 0-cells, 14400(+14400) 1-cells, 11162(+11162) 2-cells, 128(+0) 3-cells.
+Computing discrete Morse-Smale complex: 
+    29057 critical points: 128 min, 11162 s1, 14400 s2, 3367 max.
+    * minima: SKIPPED.
+    * 1-saddle: no manifolds, D.(G+) arcs ... done.
+    * 2-saddle: no manifolds, A.(G+)/D. arcs ... done.
+    * maxima: SKIPPED.
+    Computed 22290 min/saddle arcs, 28800 max/saddle arcs (102297 total).
+    Cancelling pairs with persistance < [0.00e+00,0.00e+00,0.00e+00].
+    Pairing ... cancelling ... done. (7011 removed)
+    Pairing ... no cancellable pair left.
+    Cancellation took 0.62s (7011 canceled).
+Morse complex was computed in 350.0 s.
+Writing MSC to file 'TNG100_S33_M8-5_STEL.ascii.NDnet.MSC'... done.
+Enforcing boundary conditions: notset -> natural.
+Removing out nodes ... done. (0 nodes removed)
+Sanityzing complex boundary ... done.
+   Dummy nodes : 19 minima, 44 1-saddle, 27 2-saddle, 0 maxima.
+   Dummy arcs : 90 from boundary, 176 at infinity.
+will compute persistence pairs and (0)-cycles (1T):
+    Setup  ... done.
+    Pass 1: (building) (PC|2-3> <2-3|PC) (PC|1-0> <1-0|PC) 
+    Pass 2: (building) (P|2-1> <2-1|P) 
+All done in 0.09s : 15122 nodes paired, 3 free, 0 undecided.
+Writing MSC to file 'TNG100_S33_M8-5_STEL.ascii.NDnet.MSC'... done.
+*********** Information *********
+    147 minima, 4303 1-saddle, 7416 2-saddle, 3259 maxima
+    8606 (minimum / 1-saddle) arcs
+    35401 (1-saddle /2-saddle) arcs
+    14805 (2-saddle / maximum) arcs
+****** Simplifying complex ******
+Starting Morse-Smale complex simplification.
+Computing persistence pairs and cycles ... SKIPPED.
+Sampling noise level was set to 4.0-sigma.
+Cancelling pairs with persistance ratio < [2.96e+00,3.51e+00,9.55e+01].
+    Tagging arcs ... done.
+    Cancelling pairs (smart) ... (6668 rem.)
+    Cancelling pairs (smart) ... done.
+    Cancellation took 0.17s (6668 canceled, 0 conflicts, 48 forced loops).
+Morse complex was simplified in 0.2 s.
+*********** Information *********
+    10 minima, 325 1-saddle, 885 2-saddle, 569 maxima
+    650 (minimum / 1-saddle) arcs
+    7759 (1-saddle /2-saddle) arcs
+    1764 (2-saddle / maximum) arcs
+*********************************
+******* Dumping skeleton ********
+Building NDskeleton from NDcomplex ... done. (1789 nodes / 10173 arcs = 13314 segs)
+Will write skeleton to file 'TNG100_S33_M8-5_STEL.ascii.NDnet_s4.up.NDskl'.
+Saving 3D skeleton to file TNG100_S33_M8-5_STEL.ascii.NDnet_s4.up.NDskl ... done.
+*********************************
+*********** ALL DONE ************

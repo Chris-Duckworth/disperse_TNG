@@ -1,0 +1,20 @@
+
+reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S33_M8-5_STEL.ascii (ASCII) ...reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S33_M8-5_STEL.ascii (ASCII) ... (10000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S33_M8-5_STEL.ascii (ASCII) ... (20000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S33_M8-5_STEL.ascii (ASCII) ... (30000 lines)reading /Users/cd201/disperse/disperse_TNG/tracer_catalogues/TNG100/stel_subhalo/TNG100_S33_M8-5_STEL.ascii (ASCII) ... done. (34466 lines)
+Margin set to 0.153633 (actual size is ~14039.1).
+Tesselating 34466 particles (3D) ... (+0 in boundary) done. (0.36s elapsed)
+Circumsphere test was skipped.
+Computing density ... done.
+All done in 0.51 s.
+Converting tesselation to NDnetwork ... done.
+Will write network to file 'TNG100_S33_M8-5_STEL.ascii.NDnet'.
+All done.
+
+Network was saved as : TNG100_S33_M8-5_STEL.ascii.NDnet
+   comment: 'No cosmological conversion.'
+   3D-Network has 34466 vertices.
+   periodicity: non-periodic.
+   Available faces: 257572 1-F, 446070 2-F, 222963 3-F.
+   Bounding box: x0=[-8189.98,-8189.96,-8185.08],
+                 delta=[91381.1,91374.1,91374.2].
+   Available fields: 'field_value'(0), 'log_field_value'(0), 'mass'(0)
+
