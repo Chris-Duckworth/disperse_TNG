@@ -19,7 +19,7 @@ cname = 'TNG100_S99_M8-5_STEL.ascii.NDnet_s4.up.NDskl.BRK.S001.a.crits' # snapsh
 sname = 'TNG100_S99_M8-5_STEL.ascii.NDnet_s4.up.NDskl.BRK.S001.a.segs' # snapshot of choice.
 
 # defining random 3d positions.
-pos = np.random.rand(100,3) * 75000
+pos = np.random.rand(100, 3) * 75000
 
 # -----------------------------------------------------------------------------
 # extracting nodes, saddles & minima from crits tabledata. 
@@ -39,5 +39,8 @@ segs = ud.read_upskl(filepath+'segs/'+sname)
 # Extracting start and end of segments. Calculating middpoints within periodic box.
 U = segs[['U0','U1','U2']].values
 V = segs[['V0','V1','V2']].values
+segs_mid = ud.seg_midpoint(U, V, periodic=False)
 
-#d_skel = ud.nearest_neighbour(pos, segs_mid)[0]
+# constructing KDtrees for set of midpoints of the segments which define the local 
+# geometry of the filaments.
+d_skel = ud.nearest_neighbour(pos, segs_mid)[0]
