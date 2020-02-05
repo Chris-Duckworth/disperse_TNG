@@ -19,7 +19,7 @@ def read_upskl(path_to_file):
 	'''
 	with open(path_to_file) as handle:
         # Reading in all lines starting with # and selecting the second row which has column names.
-		_,names,*_ = itertools.takewhile(lambda line: line.startswith('#'), handle)
+		_, names, *_ = itertools.takewhile(lambda line: line.startswith('#'), handle)
 		names = names[1:].split()
 	return pd.read_csv(path_to_file, header=0, names=names, sep=' ', comment='#')
 
@@ -37,19 +37,34 @@ def nearest_neighbour(lookup_positions, upskl_positions):
 	return tree.query(lookup_positions)
 
 
-
-# 
-# # Finding the midpoints of the segments which define the local geometry of filaments. 
-# # This function can handle segments passing across periodic boundaries.
-# def segs_mid_find(U,V,blen):
-#     # Using the periodic distance calculator to identify segments going across the boundary.
-#     del1 = np.abs(U - V)
-#     del2 = blen-np.abs(U - V)
-#     segs_mid = np.zeros(del1.shape)
-#     segs_mid[del1 <= del2] = (U[del1 <= del2]+V[del1 <= del2])/2
-#     # Selecting all segments which cross the boundary. The midpoint is estimated by adding the box length in the average.
-#     segs_mid[del1 > del2] = (U[del1 > del2]+V[del1 > del2]+blen)/2
-#     # Sometimes the midpoint will be above the boundary edge. Taking off box length to fix if this happens.
-#     segs_mid[segs_mid > blen] = segs_mid[segs_mid > blen] - blen
-#     return segs_mid
+def seg_midpoint(U, V, periodic=False, blen=75000):
+	'''
+	provides midpoints for all segments defined by U and V.
+	
+	to get around disperse failing to reconnect periodic box sides when sampling is low, 
+	the box has been extended in each dimension. therefore segments will be defined outside
+	of the periodic cube. this is fine if you are only interested in distances to various 
+	cosmic web features, however, continue with trepidation if you want to investigate 
+	properties of the cosmic web itself since some will be more or less repeated.
+	'''
+	
+	if periodic == False:
+		print('assuming box has been extended and hence no-longer has periodic boundaries!')
+		return (U + V)/2
+		
+	elif periodic == True:
+		print('assuming periodic cube - midpoints will be returned in range defined by box length')
+		# Using the periodic distance calculator to identify segments going across the boundary.
+		del1 = np.abs(U - V)
+		del2 = blen - np.abs(U - V)
+		segs_mid = np.zeros(del1.shape)
+		segs_mid[del1 <= del2] = (U[del1 <= del2] + V[del1 <= del2]) / 2
+		# Selecting all segments which cross the boundary. The midpoint is estimated by adding the box length in the average.
+		segs_mid[del1 > del2] = (U[del1 > del2] + V[del1 > del2] + blen) / 2
+		# Sometimes the midpoint will be above the boundary edge. Taking off box length to fix if this happens.
+		segs_mid[segs_mid > blen] = segs_mid[segs_mid > blen] - blen
+		return segs_mid
+		
+	else :
+		assert False, "Periodic must be true or false"
 
