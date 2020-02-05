@@ -6,16 +6,14 @@ Directory contains entire process to make catalogues (including intermediate fil
 
 **If you are only interested in output (i.e. distances to subhalos or your own chosen set of positions) go straight to /disperse_TNG/...** I've included a handful of Python scripts in ./lib & ./example_scripts to get you started.
 
----
 Any questions / notice anything weird? 
 ### cduckastro@gmail.com
 ### v0.1 Feb 4 2020.
----
-# Requirements : 
+
+## Requirements : 
 Python with basic packages : numpy, pandas, scipy
 
----
-# Output :
+## Output :
 
 stel_subhalo - cosmic web reconstructed using all subhalos that contain a minimum **stellar** subhalo mass of $10^{8.5} M_{\odot}$. designed to be roughly comparable to what you might be able to recover from observations. let me know if you want a different version of these.
 
@@ -23,8 +21,7 @@ dm_subalo - cosmic web reconstructed using all subhalos that contain a minimum *
 
 gas_density - cosmic web reconstructed using a downsampling of all gas cells to create a gas density field.
 
----
-# FAQs :
+## FAQs :
 
 **DisPerSE!?** 
 more info can be found here & linked papers for in-depth info: http://www2.iap.fr/users/sousbie/web/html/indexd41d.html 
