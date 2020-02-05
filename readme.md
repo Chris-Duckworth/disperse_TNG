@@ -15,15 +15,18 @@ Python with basic packages : numpy, pandas, scipy
 
 ## Output :
 
-stel_subhalo - cosmic web reconstructed using all subhalos that contain a minimum **stellar** subhalo mass of $10^{8.5} M_{\odot}$. designed to be roughly comparable to what you might be able to recover from observations. let me know if you want a different version of these.
+## Various tracers (used to reconstruct cosmic web) : 
 
-dm_subalo - cosmic web reconstructed using all subhalos that contain a minimum **total** subhalo mass of $10^{8} M_{\odot}$. designed to more or less map out total DM distribution for underlying filaments.
+stel_subhalo - cosmic web reconstructed using all subhalos that contain a minimum **stellar** subhalo mass of $10^{8.5} M_{\odot}$. designed to be roughly comparable to what you might be able to recover from observations. only supplied for relatively high redshift.
 
-gas_density - cosmic web reconstructed using a downsampling of all gas cells to create a gas density field.
+dm_subalo - cosmic web reconstructed using all subhalos that contain a minimum **total** subhalo mass of $10^{8} M_{\odot}$. designed to more or less map out total DM distribution for underlying filaments. defined for all redshifts.
+
+%gas_density - cosmic web reconstructed using a downsampling of all gas cells to create a gas density field. defined for all redshifts.
 
 ## FAQs :
 
 **DisPerSE!?** 
+
 more info can be found here & linked papers for in-depth info: http://www2.iap.fr/users/sousbie/web/html/indexd41d.html 
 
 **Why have you repeated the periodic cube outside each face of the cube to make these catalogues?**
