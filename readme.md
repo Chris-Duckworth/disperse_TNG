@@ -6,9 +6,8 @@ Directory contains entire process to make catalogues (including intermediate fil
 
 **If you are only interested in output (i.e. distances to subhalos or your own chosen set of positions) go straight to /disperse_TNG/...** I've included a handful of Python scripts in ./lib & ./example_scripts to get you started.
 
-Any questions / notice anything weird? 
-### cduckastro@gmail.com
-### v0.1 Feb 4 2020.
+Any questions / notice anything weird?   
+cduckastro@gmail.com / v0.1 Feb 4 2020.
 
 ## Requirements : 
 Python with basic packages : numpy, pandas, scipy
