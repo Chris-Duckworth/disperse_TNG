@@ -1,5 +1,7 @@
 '''
 coordinate_transforms - functions that convert code/physical units and box wrap.
+
+Chris J Duckworth cduckastro@gmail.com
 '''
 
 import numpy as np

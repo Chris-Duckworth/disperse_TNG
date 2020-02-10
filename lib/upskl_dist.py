@@ -3,7 +3,7 @@ upskl_dist.py
 
 Given a defined skeleton (critical points [.crits] and segments [.segs]) and a set of object positions (e.g. galaxies), this script returns the distance to the nearest cosmic web feature of each type (minima, saddle, node, filament) in the up-skeleton.
 
-Chris J Duckworth cduckastro@st-andrews.ac.uk
+Chris J Duckworth cduckastro@gmail.com
 '''
 
 import numpy as np

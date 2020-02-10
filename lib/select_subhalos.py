@@ -3,6 +3,8 @@ select_subhalos
 
 library of functions for selecting subhalos (for purpose of cw reconstruction) and padding 
 set of positions in periodic cube (to counteract disperse's problems with boundary conds.)
+
+Chris J Duckworth cduckastro@gmail.com
 '''
 
 import numpy as np 
