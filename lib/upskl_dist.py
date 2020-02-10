@@ -37,15 +37,17 @@ def nearest_neighbour(lookup_positions, upskl_positions):
 	return tree.query(lookup_positions)
 
 
-def seg_midpoint(U, V, periodic=False, blen=75000):
+def seg_midpoint(U, V, box_side_length, periodic=False):
 	'''
-	provides midpoints for all segments defined by U and V.
+	Returns midpoints for all segments defined by U and V (in DisPerSE). 
 	
-	to get around disperse failing to reconnect periodic box sides when sampling is low, 
-	the box has been extended in each dimension. therefore segments will be defined outside
-	of the periodic cube. this is fine if you are only interested in distances to various 
-	cosmic web features, however, continue with trepidation if you want to investigate 
-	properties of the cosmic web itself since some will be more or less repeated.
+	To get around disperse failing to reconnect periodic box sides when sampling is low, 
+	the box has been extended in each dimension. Therefore segments will be defined outside
+	of the periodic cube. 
+	
+	process_segments reconnects segments and re-enforces periodic boundaries, in that case 
+	use periodic=True which calculates midpoints taking into account periodic boundaries.
+	
 	'''
 	
 	if periodic == False:
@@ -56,13 +58,13 @@ def seg_midpoint(U, V, periodic=False, blen=75000):
 		print('assuming periodic cube - midpoints will be returned in range defined by box length')
 		# Using the periodic distance calculator to identify segments going across the boundary.
 		del1 = np.abs(U - V)
-		del2 = blen - np.abs(U - V)
+		del2 = box_side_length - np.abs(U - V)
 		segs_mid = np.zeros(del1.shape)
 		segs_mid[del1 <= del2] = (U[del1 <= del2] + V[del1 <= del2]) / 2
 		# Selecting all segments which cross the boundary. The midpoint is estimated by adding the box length in the average.
-		segs_mid[del1 > del2] = (U[del1 > del2] + V[del1 > del2] + blen) / 2
+		segs_mid[del1 > del2] = (U[del1 > del2] + V[del1 > del2] + box_side_length) / 2
 		# Sometimes the midpoint will be above the boundary edge. Taking off box length to fix if this happens.
-		segs_mid[segs_mid > blen] = segs_mid[segs_mid > blen] - blen
+		segs_mid[segs_mid > box_side_length] = segs_mid[segs_mid > box_side_length] - box_side_length
 		return segs_mid
 		
 	else :

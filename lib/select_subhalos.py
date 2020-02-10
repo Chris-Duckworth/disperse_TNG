@@ -25,7 +25,6 @@ def return_stel_tracers(basepath, snapnum, blen, min_mass=10**8.5):
 	return subhalos['SubhaloPos'][()][subhalos['SubhaloMassType'][()][:,4]*10**10 > min_mass]
 
 
-
 def box_extend(blen, pos, frac=0.1):
 	'''
 	Given a periodic cube of equal side length blen, this script extends (or pads) each
