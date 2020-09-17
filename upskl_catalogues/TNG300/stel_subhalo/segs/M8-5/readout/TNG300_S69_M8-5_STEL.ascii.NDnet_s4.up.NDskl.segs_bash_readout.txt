@@ -1,0 +1,6 @@
+Will read skeleton from file '/Users/cd201/disperse/disperse_TNG/morse_smale_catalogues/TNG300/stel_subhalo/TNG300_S69_M8-5_STEL.ascii.NDnet_s4.up.NDskl'.
+Loading 3D skeleton from file /Users/cd201/disperse/disperse_TNG/morse_smale_catalogues/TNG300/stel_subhalo/TNG300_S69_M8-5_STEL.ascii.NDnet_s4.up.NDskl ... done.
+Breaking down skeleton ... done.
+Broken down skeleton has 53456(+13503) nodes and 174266(-72223) segments.
+Smoothing skeleton 1 times ... done.
+Will write skeleton to file 'TNG300_S69_M8-5_STEL.ascii.NDnet_s4.up.NDskl.BRK.S001.a.segs'.
