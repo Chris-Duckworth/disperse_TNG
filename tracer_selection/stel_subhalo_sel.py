@@ -23,7 +23,7 @@ outpath = '/u/cduckwor/python/disperse_release/tracer_catalogues/TNG100/stel_sub
 # ---------------------------------------------------------------------------------------
 # running for a defined set of snapshots.
 
-snaps = np.array([33, 50, 67, 72, 78, 84, 91, 99]) # np.arange(100)
+snaps = np.arange(30, 100)
 
 for ind in snaps:
 	# wrapping 10% of box edges in each direction.
@@ -48,7 +48,7 @@ outpath = '/u/cduckwor/python/disperse_release/tracer_catalogues/TNG300/stel_sub
 # ---------------------------------------------------------------------------------------
 # running for a defined set of snapshots.
 
-snaps = np.array([33, 50, 67, 72, 78, 84, 91, 99]) # np.arange(100)
+snaps = np.arange(30, 100)
 
 for ind in snaps:
 	# wrapping 10% of box edges in each direction.
