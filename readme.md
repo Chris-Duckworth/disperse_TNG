@@ -39,11 +39,11 @@ Python with basic packages : numpy, pandas, scipy, h5py
 
 DisPerSE (Discrete Persistent Structure Extractor) is a geometric ridge extractor which identifies critical points in a density field and the unique integral lines between them (i.e. filaments). More info can be found here (plus linked papers): http://www2.iap.fr/users/sousbie/web/html/indexd41d.html 
 
-In a sentence, disperse uses a set of discrete points (e.g. galaxies) to estimate the density field, and hence, identify the morphological features of the cosmic web. Here we reconstruct the cosmic web using two different sets of tracers:
+In a sentence, disperse uses a set of discrete points (e.g. galaxies) to estimate the density field, and hence, identify the morphological features of the cosmic web. By definition every filament starts and ends at a node and saddle points are minima along the filament. To define the _robustness_ of each pair of critical points, the persistence is defined (i.e. peak relative to background). Here we reconstruct the cosmic web using two different sets of tracers:
 
-- stel_subhalo [TNG100 and TNG300] - cosmic web reconstructed using all subhalos that contain a minimum **stellar** subhalo mass of 10^{8.5} Msol. Designed to be roughly comparable to what you might be able to recover from observations. Snapshots: 33, 40, 50, 67, 78, 84, 91, 99. (Other snapshots later than 30 available on demand).
+- stel_subhalo [TNG100 and TNG300] - cosmic web reconstructed using all subhalos that contain a minimum **stellar** subhalo mass of 10^{8.5} Msol. Designed to be roughly comparable to what you might be able to recover from observations. Snapshots: 33, 40, 50, 67, 78, 84, 91, 99. (Other snapshots later than 30 available on demand). Persistence: sigma = 4
 
-- DM_subalo [TNG100 only currently] - cosmic web reconstructed using all subhalos that contain a minimum **total** subhalo mass of 10^{8.5} Msol (i.e. including DM and gas masses). Designed to recover an unbiased cosmic web, however, is less precise than computing from raw particle distrbutions. Snapshots: 33, 40, 50, 67, 78, 84, 91, 99.
+- DM_subalo [TNG100 only currently] - cosmic web reconstructed using all subhalos that contain a minimum **total** subhalo mass of 10^{8.5} Msol (i.e. including DM and gas masses). Designed to recover an unbiased cosmic web, however, is less precise than computing from raw particle distrbutions. Snapshots: 33, 40, 50, 67, 78, 84, 91, 99. Persistence: sigma = 3
 
 ---
 
