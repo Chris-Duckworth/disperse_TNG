@@ -1,3 +1,5 @@
+<img src=./cw_left.png alt="alt text" width="whatever" height="whatever">
+
 # IllustrisTNG DisPerSE cosmic web catalogues
 
 Cosmic web (CW) catalogues for IllustrisTNG 100 and 300. 
